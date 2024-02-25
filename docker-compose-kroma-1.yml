@@ -10,4 +10,5 @@ services:
       - envs/${NETWORK_NAME}/validator.env
     profiles:
       - validator
-      - validator+proxy
+    extra_hosts:
+      - "host.docker.internal:host-gateway"

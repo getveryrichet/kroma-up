@@ -11,4 +11,6 @@ To learn more about how to run a full node or a validator node on Kroma, please 
     - [How to sync blocks using a snapshot](https://docs.kroma.network/developers/running-nodes-on-kroma/how-to-sync-blocks-using-a-snapshot)
     - [FAQ](https://docs.kroma.network/developers/running-nodes-on-kroma/faq)
 
-docker compose --env-file .env -f docker-compose-kroma-1.yml up -d
+docker compose --env-file .env --profile validator -f docker-compose-kroma-1.yml up -d 
+
+docker compose -f docker-compose-kroma-1.yml down
