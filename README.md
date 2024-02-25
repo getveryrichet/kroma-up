@@ -13,4 +13,6 @@ To learn more about how to run a full node or a validator node on Kroma, please 
 
 docker compose --env-file .env --profile validator -f docker-compose-kroma-1.yml up -d 
 
-docker compose -f docker-compose-kroma-1.yml down
+docker compose --env-file .env --profile validator -f docker-compose-kroma-1.yml down
+
+docker exec kroma-validator kroma-validator withdraw --amount 200000000000000000
