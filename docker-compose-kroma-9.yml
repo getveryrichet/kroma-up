@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  kroma-validator:
+    container_name: kroma-validator-9
+    image: kromanetwork/validator:${IMAGE_TAG__KROMA_VALIDATOR}
+    restart: unless-stopped
+    stop_grace_period: 50s
+    env_file:
+      - envs/${NETWORK_NAME}/validator.env
+    profiles:
+      - validator
